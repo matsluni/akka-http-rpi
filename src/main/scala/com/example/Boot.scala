@@ -6,6 +6,8 @@ import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.marshallers.xml.ScalaXmlSupport._
 import akka.stream.ActorMaterializer
 
+import scala.io.StdIn
+
 object Boot extends App {
 
   implicit val system = ActorSystem("akka-http")
@@ -28,10 +30,10 @@ object Boot extends App {
   val bindingFuture = Http().bindAndHandle(route, "0.0.0.0", 8080)
 
   println(s"Server online at http://localhost:8080/\nPress RETURN to stop...")
-  Console.readLine()
+  StdIn.readLine()
 
   import system.dispatcher // for the future transformations
   bindingFuture
     .flatMap(_.unbind()) // trigger unbinding from the port
-    .onComplete{_ ⇒ system.shutdown()} // and shutdown when done
+    .onComplete{_ ⇒ system.terminate()} // and shutdown when done
 }

@@ -14,13 +14,10 @@ resolvers ++= Seq(
 
 libraryDependencies ++= {
 
-    val akkaHttpVersion = "1.0"
+    val akkaVersion = "2.4.2-RC1"
     Seq(
-        "com.typesafe.akka"   %% "akka-stream-experimental"     % akkaHttpVersion,
-        "com.typesafe.akka"   %% "akka-http-experimental"       % akkaHttpVersion,
-        "com.typesafe.akka"   %% "akka-http-xml-experimental"   % akkaHttpVersion
-
-//        "com.typesafe.akka"   %% "akka-testkit"             % akkaHttpVersion   % "test"
+        "com.typesafe.akka"   %% "akka-http-experimental"       % akkaVersion,
+        "com.typesafe.akka"   %% "akka-http-xml-experimental"   % akkaVersion
 )}
 
 seq(Revolver.settings: _*)
