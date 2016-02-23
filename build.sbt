@@ -14,7 +14,7 @@ resolvers ++= Seq(
 
 libraryDependencies ++= {
 
-    val akkaVersion = "2.4.2-RC1"
+    val akkaVersion = "2.4.2"
     Seq(
         "com.typesafe.akka"   %% "akka-http-experimental"       % akkaVersion,
         "com.typesafe.akka"   %% "akka-http-xml-experimental"   % akkaVersion
