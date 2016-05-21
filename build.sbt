@@ -4,9 +4,14 @@ version       := "0.1"
 
 name          := "akka-http-rpi"
 
-scalaVersion  := "2.11.7"
+scalaVersion  := "2.11.8"
 
-scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
+scalacOptions := Seq("-unchecked",
+                     "-deprecation",
+                     "-Ybackend:GenBCode",
+                     "-Ydelambdafy:method",
+                     "-target:jvm-1.8",
+                     "-encoding", "utf8")
 
 resolvers ++= Seq(
   "akka repo"             at "http://repo.akka.io/releases/"
@@ -14,7 +19,7 @@ resolvers ++= Seq(
 
 libraryDependencies ++= {
 
-    val akkaVersion = "2.4.2"
+    val akkaVersion = "2.4.5"
     Seq(
         "com.typesafe.akka"   %% "akka-http-experimental"       % akkaVersion,
         "com.typesafe.akka"   %% "akka-http-xml-experimental"   % akkaVersion
