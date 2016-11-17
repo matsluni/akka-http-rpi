@@ -4,12 +4,10 @@ version       := "0.1"
 
 name          := "akka-http-rpi"
 
-scalaVersion  := "2.11.8"
+scalaVersion  := "2.12.0"
 
 scalacOptions := Seq("-unchecked",
                      "-deprecation",
-                     "-Ybackend:GenBCode",
-                     "-Ydelambdafy:method",
                      "-target:jvm-1.8",
                      "-encoding", "utf8")
 
@@ -19,10 +17,9 @@ resolvers ++= Seq(
 
 libraryDependencies ++= {
 
-    val akkaVersion = "2.4.11"
+    val akkaHttpVersion = "10.0.0-RC2"
     Seq(
-        "com.typesafe.akka"   %% "akka-http-experimental"       % akkaVersion,
-        "com.typesafe.akka"   %% "akka-http-xml-experimental"   % akkaVersion
+        "com.typesafe.akka"   %% "akka-http"                    % akkaHttpVersion
 )}
 
 seq(Revolver.settings: _*)

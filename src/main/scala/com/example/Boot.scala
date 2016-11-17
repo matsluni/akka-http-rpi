@@ -3,10 +3,7 @@ package com.example
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.server.Directives._
-import akka.http.scaladsl.marshallers.xml.ScalaXmlSupport._
 import akka.stream.ActorMaterializer
-
-import scala.io.StdIn
 
 object Boot extends App {
 
@@ -17,11 +14,7 @@ object Boot extends App {
     path("") {
       get {
         complete {
-          <html>
-            <body>
-              <h1>Say hello to <i>akka-http</i> on <i>Raspberry Pi</i>!</h1>
-            </body>
-          </html>
+          "Say hello to akka-http on Raspberry Pi"
         }
       }
     }
