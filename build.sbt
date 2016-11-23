@@ -16,11 +16,11 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= {
-
-    val akkaHttpVersion = "10.0.0-RC2"
+    val akkaHttpVersion = "10.0.0"
     Seq(
         "com.typesafe.akka"   %% "akka-http"                    % akkaHttpVersion
-)}
+    )
+}
 
-seq(Revolver.settings: _*)
+Seq(Revolver.settings: _*)
 
