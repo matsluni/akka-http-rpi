@@ -17,8 +17,11 @@ resolvers ++= Seq(
 
 libraryDependencies ++= {
     val akkaHttpVersion = "10.0.0"
+    val scalaTestVersion = "3.0.1"
     Seq(
-        "com.typesafe.akka"   %% "akka-http"                    % akkaHttpVersion
+        "com.typesafe.akka" %% "akka-http"          % akkaHttpVersion,
+        "com.typesafe.akka" %% "akka-http-testkit"  % akkaHttpVersion  % "test",
+        "org.scalatest"     %% "scalatest"          % scalaTestVersion % "test"
     )
 }
 
