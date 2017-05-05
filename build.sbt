@@ -4,7 +4,7 @@ version       := "0.1"
 
 name          := "akka-http-rpi"
 
-scalaVersion  := "2.12.1"
+scalaVersion  := "2.12.2"
 
 scalacOptions := Seq("-unchecked",
                      "-deprecation",
@@ -16,8 +16,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= {
-    val akkaHttpVersion = "10.0.5"
-    val scalaTestVersion = "3.0.1"
+    val akkaHttpVersion = "10.0.6"
+    val scalaTestVersion = "3.0.3"
     Seq(
         "com.typesafe.akka" %% "akka-http"          % akkaHttpVersion,
         "com.typesafe.akka" %% "akka-http-testkit"  % akkaHttpVersion  % "test",
