@@ -53,5 +53,4 @@ Follow these steps to get started:
     wrk -c 30 -t 20 -d20s http://raspberrypi:8080/
         
 In my tests I could reach around 520 Req/sec with this setup, but this setup isn't in any way optimized.
-In further tests I want to invetigate further and see some backpressure at work.
-
+In further tests I want to investigate further and see some backpressure at work.
