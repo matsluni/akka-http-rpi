@@ -16,7 +16,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= {
-    val akkaHttpVersion = "10.0.7"
+    val akkaHttpVersion = "10.0.8"
     val akkaVersion = "2.5.3"
     val scalaTestVersion = "3.0.3"
     Seq(
