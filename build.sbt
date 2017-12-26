@@ -16,8 +16,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= {
-    val akkaHttpVersion = "10.0.11"
-    val akkaVersion = "2.5.7"
+    val akkaHttpVersion = "10.1.0-RC1"
+    val akkaVersion = "2.5.8"
     val scalaTestVersion = "3.0.3"
     Seq(
         "com.typesafe.akka" %% "akka-stream"        % akkaVersion,
