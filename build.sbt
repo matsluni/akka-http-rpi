@@ -11,10 +11,6 @@ scalacOptions := Seq("-unchecked",
                      "-target:jvm-1.8",
                      "-encoding", "utf8")
 
-resolvers ++= Seq(
-  "akka repo"             at "http://repo.akka.io/releases/"
-)
-
 libraryDependencies ++= {
     val akkaHttpVersion = "10.1.8"
     val akkaVersion = "2.5.22"
