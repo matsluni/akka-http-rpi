@@ -4,17 +4,19 @@ version       := "0.1"
 
 name          := "akka-http-rpi"
 
-scalaVersion  := "2.12.8"
+scalaVersion  := "2.12.9"
 
 scalacOptions := Seq("-unchecked",
                      "-deprecation",
                      "-target:jvm-1.8",
                      "-encoding", "utf8")
 
+Global / onChangedBuildSource := ReloadOnSourceChanges
+
 libraryDependencies ++= {
-    val akkaHttpVersion = "10.1.8"
-    val akkaVersion = "2.5.22"
-    val scalaTestVersion = "3.0.7"
+    val akkaHttpVersion = "10.1.9"
+    val akkaVersion = "2.5.25"
+    val scalaTestVersion = "3.0.8"
     Seq(
         "com.typesafe.akka" %% "akka-stream"          % akkaVersion,
         "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
