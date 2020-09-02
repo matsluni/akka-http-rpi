@@ -8,10 +8,9 @@ import akka.stream.ActorMaterializer
 object Boot extends App with Route {
 
   implicit val system = ActorSystem("akka-http")
-  implicit val materializer = ActorMaterializer()
 
-  // start a new HTTP server on port 8080 with our service actor as the handler
-  val bindingFuture = Http().bindAndHandle(route, "0.0.0.0", 8080)
+  // start a new HTTP server on port 8080 with our route as the handler
+  val bindingFuture = Http().newServerAt("0.0.0.0", 8080).bind(route)
 
   println(s"Server online at http://localhost:8080/\nPress RETURN to stop...")
 
