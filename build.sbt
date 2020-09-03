@@ -28,3 +28,11 @@ libraryDependencies ++= {
 
 Seq(Revolver.settings: _*)
 
+enablePlugins(NativeImagePlugin)
+
+Compile / mainClass := Some("com.example.Boot")
+
+nativeImageOptions ++= List("--initialize-at-build-time",
+                            "--no-fallback",
+                            "-H:IncludeResources=.*",
+                            "-H:ReflectionConfigurationResources=reflect-config.json")
